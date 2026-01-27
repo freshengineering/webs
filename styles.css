@@ -53,7 +53,7 @@ h4 {
 }
 
 h1 {
-    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-size: clamp(2.5rem, 6.8vw, 4.7rem);
     line-height: 1;
     margin-bottom: 1.5rem;
 }
