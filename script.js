@@ -66,6 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Project Cards - Tap to Reveal (Mobile)
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('click', function () {
+            // Remove active class from all other cards (accordion behavior)
+            projectCards.forEach(c => {
+                if (c !== this) c.classList.remove('active');
+            });
+            // Toggle active class on clicked card
+            this.classList.toggle('active');
+        });
+    });
+
     // Simple Form Submission Handler (Prevent default reload)
     const form = document.querySelector('.contact-form');
     if (form) {
