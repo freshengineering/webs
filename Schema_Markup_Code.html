@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Engineering - Schema Markup Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #2E75B6;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        .subtitle {
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2E75B6;
+            border-bottom: 2px solid #2E75B6;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: #333;
+            margin-top: 25px;
+        }
+        .code-block {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 15px 0;
+            position: relative;
+            overflow-x: auto;
+        }
+        pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #2E75B6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .copy-btn:hover {
+            background-color: #235a8f;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .instruction {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .meta-tag {
+            background-color: #e7f3ff;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .tag-label {
+            font-weight: bold;
+            color: #2E75B6;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Fresh Engineering - SEO Implementation Code</h1>
+        <div class="subtitle">Ready-to-use meta tags and schema markup for freshengineering.com.au</div>
+    </div>
+
+    <div class="section">
+        <h2>📋 Quick Implementation Checklist</h2>
+        <ol>
+            <li>Copy the meta tags for each page and add them to the <code>&lt;head&gt;</code> section</li>
+            <li>Copy the schema markup and add it just before the closing <code>&lt;/head&gt;</code> tag</li>
+            <li>Update the placeholder values (phone number, address) with your actual details</li>
+            <li>Test using Google's Rich Results Test: <a href="https://search.google.com/test/rich-results" target="_blank">https://search.google.com/test/rich-results</a></li>
+        </ol>
+    </div>
+
+    <!-- HOMEPAGE META TAGS -->
+    <div class="section">
+        <h2>🏠 Homepage Meta Tags</h2>
+        
+        <div class="meta-tag">
+            <div class="tag-label">Title Tag (60 characters):</div>
+            <code>Traffic Engineering Melbourne | Road Safety Audits &amp; Traffic Management | Fresh Engineering</code>
+        </div>
+
+        <div class="meta-tag">
+            <div class="tag-label">Meta Description (157 characters):</div>
+            <code>Expert traffic engineering and road safety audits across Melbourne and Victoria. Specializing in TMPs, traffic impact assessments, RSAs, and compliance audits for major infrastructure projects.</code>
+        </div>
+
+        <h3>HTML Code to Add:</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;!-- Add to &lt;head&gt; section --&gt;
+&lt;title&gt;Traffic Engineering Melbourne | Road Safety Audits &amp; Traffic Management | Fresh Engineering&lt;/title&gt;
+&lt;meta name="description" content="Expert traffic engineering and road safety audits across Melbourne and Victoria. Specializing in TMPs, traffic impact assessments, RSAs, and compliance audits for major infrastructure projects."&gt;
+&lt;meta name="keywords" content="traffic engineering melbourne, road safety audit victoria, traffic management plans, TMP, CTIA, traffic impact assessment, AGTTM, VicRoads"&gt;
+
+&lt;!-- Open Graph Tags for Social Sharing --&gt;
+&lt;meta property="og:title" content="Fresh Engineering - Traffic Engineering Melbourne"&gt;
+&lt;meta property="og:description" content="Expert traffic engineering and road safety audits across Melbourne and Victoria."&gt;
+&lt;meta property="og:image" content="https://www.freshengineering.com.au/fresh-logo.png"&gt;
+&lt;meta property="og:url" content="https://www.freshengineering.com.au"&gt;
+&lt;meta property="og:type" content="website"&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- SCHEMA MARKUP -->
+    <div class="section">
+        <h2>🔍 Schema Markup (JSON-LD)</h2>
+        
+        <div class="instruction">
+            <strong>Instructions:</strong> Add this code just before the closing <code>&lt;/head&gt;</code> tag on your homepage. 
+            <br><strong>Remember to:</strong> Update the phone number, street address, postal code, and coordinates with your actual details.
+        </div>
+
+        <h3>LocalBusiness / ProfessionalService Schema:</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Fresh Engineering Pty Ltd",
+  "image": "https://www.freshengineering.com.au/fresh-logo.png",
+  "@id": "https://www.freshengineering.com.au",
+  "url": "https://www.freshengineering.com.au",
+  "telephone": "+61-XXX-XXX-XXX",
+  "email": "info@freshengineering.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Your Street Address",
+    "addressLocality": "Melbourne",
+    "addressRegion": "VIC",
+    "postalCode": "XXXX",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -37.8136,
+    "longitude": 144.9631
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Victoria"
+    },
+    {
+      "@type": "City",
+      "name": "Melbourne"
+    }
+  ],
+  "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/fresh-engineering"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Traffic Engineering Services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Traffic Management Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Temporary Traffic Management Plans (TMP)",
+              "description": "AGTTM-compliant traffic management designs for all road classifications"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Road Safety Audits",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Accredited Road Safety Audits",
+              "description": "Independent safety assessments for design and operational worksites"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Traffic Impact Assessments",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Traffic Impact Assessment Reports",
+              "description": "Comprehensive traffic analysis reports to support road authority applications"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+&lt;/script&gt;</code></pre>
+        </div>
+
+        <h3>Organization Schema (Additional):</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fresh Engineering Pty Ltd",
+  "alternateName": "Fresh Engineering",
+  "url": "https://www.freshengineering.com.au",
+  "logo": "https://www.freshengineering.com.au/fresh-logo.png",
+  "description": "Professional traffic engineering, road safety audits, and traffic management services across Melbourne and Victoria",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Melbourne",
+    "addressRegion": "VIC",
+    "addressCountry": "AU"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info@freshengineering.com.au",
+    "contactType": "customer service",
+    "areaServed": "AU",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/fresh-engineering"
+  ],
+  "knowsAbout": [
+    "Traffic Engineering",
+    "Road Safety Audits",
+    "Traffic Management Plans",
+    "Traffic Impact Assessments",
+    "AGTTM",
+    "VicRoads Compliance",
+    "Construction Traffic Management"
+  ]
+}
+&lt;/script&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- SERVICE PAGE METAS -->
+    <div class="section">
+        <h2>🛠️ Service Page Meta Tags</h2>
+        
+        <h3>Traffic Management Plans Page (/traffic-management-plans/)</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;title&gt;Traffic Management Plans Melbourne | TMP &amp; CTIA | Fresh Engineering&lt;/title&gt;
+&lt;meta name="description" content="Professional Traffic Management Plans (TMP) and Construction Traffic Impact Assessments (CTIA) designed to AGTTM standards. Serving Melbourne metro and regional Victoria projects."&gt;
+&lt;meta name="keywords" content="traffic management plan, TMP, CTIA, construction traffic, AGTTM, melbourne traffic management, temporary traffic management"&gt;</code></pre>
+        </div>
+
+        <h3>Road Safety Audits Page (/road-safety-audits/)</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;title&gt;Road Safety Audits Victoria | Accredited RSA | Fresh Engineering&lt;/title&gt;
+&lt;meta name="description" content="Accredited Road Safety Audits for Victorian infrastructure projects. Independent safety assessments for design stages 1-4 and operational worksites. Practical recommendations."&gt;
+&lt;meta name="keywords" content="road safety audit, RSA, safety audit victoria, accredited auditor, design safety, construction safety"&gt;</code></pre>
+        </div>
+
+        <h3>Traffic Impact Assessments Page (/traffic-impact-assessments/)</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;title&gt;Traffic Impact Assessment Melbourne | TIA Reports | Fresh Engineering&lt;/title&gt;
+&lt;meta name="description" content="Comprehensive traffic impact assessments supporting development applications to VicRoads, DoT, and local councils. SIDRA analysis, capacity assessments, and road authority liaison."&gt;
+&lt;meta name="keywords" content="traffic impact assessment, TIA, SIDRA analysis, development traffic, capacity analysis, VicRoads assessment"&gt;</code></pre>
+        </div>
+
+        <h3>Compliance Audits Page (/compliance-audits/)</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;title&gt;Traffic Management Compliance Audits Melbourne | TMP Verification | Fresh Engineering&lt;/title&gt;
+&lt;meta name="description" content="Independent verification of traffic management setups ensuring strict adherence to permits and regulatory standards. Site inspections and compliance reporting for Melbourne projects."&gt;
+&lt;meta name="keywords" content="compliance audit, traffic management audit, TMP verification, site inspection, permit compliance, AGTTM compliance"&gt;</code></pre>
+        </div>
+
+        <h3>Car Parking Assessments Page (/car-parking-assessments/)</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;title&gt;Car Parking Demand Assessments Melbourne | Parking Analysis | Fresh Engineering&lt;/title&gt;
+&lt;meta name="description" content="Data-driven car parking demand assessments to justify reductions or optimise layouts. Supporting development applications across Melbourne and regional Victoria."&gt;
+&lt;meta name="keywords" content="car parking assessment, parking demand, parking analysis, development parking, parking reduction, melbourne parking requirements"&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- SERVICE SCHEMA EXAMPLES -->
+    <div class="section">
+        <h2>📦 Service-Specific Schema Markup</h2>
+        
+        <div class="note">
+            <strong>Note:</strong> Add one of these schema blocks to each individual service page in addition to the main LocalBusiness schema.
+        </div>
+
+        <h3>Traffic Management Plans Service Schema:</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Traffic Management Plans",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Fresh Engineering Pty Ltd",
+    "url": "https://www.freshengineering.com.au"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Victoria"
+  },
+  "description": "Temporary Traffic Management Plans (TMP) and Construction Traffic Impact Assessments (CTIA) designed to AGTTM and local standards for road authorities and construction projects.",
+  "category": "Traffic Engineering",
+  "termsOfService": "https://www.freshengineering.com.au/terms-of-use.html"
+}
+&lt;/script&gt;</code></pre>
+        </div>
+
+        <h3>Road Safety Audits Service Schema:</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Road Safety Audits",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Fresh Engineering Pty Ltd",
+    "url": "https://www.freshengineering.com.au"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Victoria"
+  },
+  "description": "Accredited Road Safety Audits for all design and worksite stages, identifying risks and providing practical recommendations in accordance with Austroads standards.",
+  "category": "Road Safety Engineering",
+  "termsOfService": "https://www.freshengineering.com.au/terms-of-use.html"
+}
+&lt;/script&gt;</code></pre>
+        </div>
+
+        <h3>Traffic Impact Assessment Service Schema:</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Traffic Impact Assessments",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Fresh Engineering Pty Ltd",
+    "url": "https://www.freshengineering.com.au"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Victoria"
+  },
+  "description": "Comprehensive traffic analysis reports including SIDRA modelling, capacity assessments, and road authority liaison to support development applications.",
+  "category": "Traffic Engineering",
+  "termsOfService": "https://www.freshengineering.com.au/terms-of-use.html"
+}
+&lt;/script&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- BREADCRUMB SCHEMA -->
+    <div class="section">
+        <h2>🗺️ Breadcrumb Schema (For Service Pages)</h2>
+        
+        <div class="instruction">
+            Add breadcrumb schema to help Google understand your site structure. Update the URL and page name for each service page.
+        </div>
+
+        <h3>Example for Traffic Management Plans page:</h3>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+            <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.freshengineering.com.au"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.freshengineering.com.au/#services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Traffic Management Plans",
+      "item": "https://www.freshengineering.com.au/traffic-management-plans/"
+    }
+  ]
+}
+&lt;/script&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- TESTING SECTION -->
+    <div class="section">
+        <h2>✅ Testing Your Implementation</h2>
+        
+        <h3>1. Rich Results Test</h3>
+        <p>Test your schema markup using Google's Rich Results Test:</p>
+        <a href="https://search.google.com/test/rich-results" target="_blank" style="color: #2E75B6; font-weight: bold;">https://search.google.com/test/rich-results</a>
+        
+        <h3>2. Schema Markup Validator</h3>
+        <p>Additional validation tool:</p>
+        <a href="https://validator.schema.org/" target="_blank" style="color: #2E75B6; font-weight: bold;">https://validator.schema.org/</a>
+        
+        <h3>3. Google Search Console</h3>
+        <p>After implementation, check for errors in Google Search Console:</p>
+        <a href="https://search.google.com/search-console" target="_blank" style="color: #2E75B6; font-weight: bold;">https://search.google.com/search-console</a>
+        
+        <div class="note">
+            <strong>Important:</strong> It may take 2-4 weeks for Google to fully index your changes and display rich results in search.
+        </div>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            const codeBlock = button.nextElementSibling;
+            const code = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.backgroundColor = '#28a745';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.backgroundColor = '#2E75B6';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
