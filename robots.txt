@@ -1,8 +1,4 @@
 User-agent: *
-Disallow: /index.html
 Allow: /
-Allow: /favicon.ico
-Allow: /favicon.png
-Allow: /apple-touch-icon.png
 
 Sitemap: https://www.freshengineering.com.au/sitemap.xml

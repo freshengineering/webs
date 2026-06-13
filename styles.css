@@ -280,6 +280,95 @@ header {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* Accessibility: skip-to-content link */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 2000;
+    background: #003399;
+    color: #fff;
+    padding: 12px 20px;
+    font-weight: 700;
+    border-radius: 0 0 6px 0;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+/* Header click-to-call button */
+.header-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #003399;
+    color: #fff;
+    padding: 11px 22px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.header-phone:hover {
+    background-color: #00217A;
+}
+
+.header-phone svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Hero keyword subtitle */
+.hero-subtitle {
+    margin-top: 1.25rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+    font-weight: 500;
+    color: var(--text-primary);
+    max-width: 760px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Related services block on service pages */
+.related-services {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+    margin-top: 2rem;
+}
+
+.related-services h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.related-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.related-services-grid a {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.related-services-grid a:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-void);
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -728,6 +817,14 @@ footer {
 
     .mobile-menu-btn {
         display: block;
+    }
+
+    .header-phone {
+        padding: 9px 12px;
+    }
+
+    .header-phone-text {
+        display: none;
     }
 
     h1 {

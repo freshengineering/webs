@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             mobileBtn.classList.toggle('active');
+            mobileBtn.setAttribute('aria-expanded', mobileBtn.classList.contains('active'));
             // Animate hamburger to X
             const spans = mobileBtn.querySelectorAll('span');
             spans.forEach(span => span.classList.toggle('active'));
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const mobileBtn = document.querySelector('.mobile-menu-btn');
                 if (mobileBtn) {
                     mobileBtn.classList.remove('active');
+                    mobileBtn.setAttribute('aria-expanded', 'false');
                     mobileBtn.querySelectorAll('span').forEach(span => span.classList.remove('active'));
                 }
             }
