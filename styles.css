@@ -180,6 +180,56 @@ textarea:focus-visible,
     margin: 0;
 }
 
+/* Areas We Serve */
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.area-col {
+    background: var(--bg-panel);
+    border: var(--border-glass);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.area-col h3 {
+    color: var(--accent-glow);
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.area-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.area-col li {
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.area-col li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Inline form status message */
 .form-status {
     padding: 1rem 1.2rem;

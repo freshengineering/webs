@@ -73,18 +73,12 @@
     "longitude": 144.9631
   },
   "areaServed": [
-    {
-      "@type": "City",
-      "name": "Melbourne"
-    },
-    {
-      "@type": "State",
-      "name": "Victoria"
-    },
-    {
-      "@type": "Country",
-      "name": "Australia"
-    }
+    { "@type": "City", "name": "Melbourne" },
+    { "@type": "City", "name": "Geelong" },
+    { "@type": "City", "name": "Ballarat" },
+    { "@type": "City", "name": "Bendigo" },
+    { "@type": "State", "name": "Victoria" },
+    { "@type": "Country", "name": "Australia" }
   ],
   "priceRange": "$$",
   "openingHoursSpecification": {
@@ -193,7 +187,7 @@
 
     <link rel="preload" as="image" href="fresh-hero.jpg" fetchpriority="high">
     <!-- Design Rules: Global Styles & Typography -->
-    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="styles.css?v=7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Enforcing Jost as per Design Rules -->
@@ -493,6 +487,52 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Areas We Serve -->
+    <section id="areas" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Areas We Serve</h2>
+                <p>Traffic engineering and road safety support across metropolitan Melbourne and regional Victoria,
+                    working with local councils and the Department of Transport and Planning (DTP).</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-col">
+                    <h3>Metropolitan Melbourne</h3>
+                    <ul>
+                        <li>Inner &amp; Central Melbourne</li>
+                        <li>Northern suburbs</li>
+                        <li>Eastern suburbs</li>
+                        <li>South-East &amp; Bayside</li>
+                        <li>Western suburbs</li>
+                    </ul>
+                </div>
+                <div class="area-col">
+                    <h3>Regional Victoria</h3>
+                    <ul>
+                        <li>Geelong &amp; the Bellarine</li>
+                        <li>Ballarat &amp; Bendigo</li>
+                        <li>Gippsland &amp; Latrobe Valley</li>
+                        <li>Surf Coast &amp; the Otways</li>
+                        <li>Goulburn Valley</li>
+                    </ul>
+                </div>
+                <div class="area-col">
+                    <h3>Who We Work With</h3>
+                    <ul>
+                        <li>Local councils</li>
+                        <li>DTP / VicRoads</li>
+                        <li>Developers &amp; builders</li>
+                        <li>Tier 1 &amp; civil contractors</li>
+                        <li>Utility &amp; service authorities</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2.5rem; color: var(--text-secondary);">Not sure if we cover your
+                area? <a href="#contact" style="color: var(--accent-cyan);">Get in touch</a> — we work across all
+                Victorian council areas.</p>
         </div>
     </section>
 
