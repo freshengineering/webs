@@ -191,8 +191,9 @@
 }
 </script>
 
+    <link rel="preload" as="image" href="fresh-hero.jpg" fetchpriority="high">
     <!-- Design Rules: Global Styles & Typography -->
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Enforcing Jost as per Design Rules -->
@@ -542,6 +543,7 @@
 
                 <div class="contact-form-wrapper">
                     <form class="contact-form" action="https://formspree.io/f/xdaglvjp" method="POST">
+                        <div class="form-status" role="status" aria-live="polite"></div>
                         <div class="form-group">
                             <label class="form-label" for="name">Full Name</label>
                             <input type="text" id="name" name="name" class="form-input" placeholder="John Smith"
@@ -554,7 +556,8 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="service">Service Required</label>
-                            <select id="service" name="service" class="form-input">
+                            <select id="service" name="service" class="form-input" required>
+                                <option value="" disabled selected>Select a service…</option>
                                 <option>Traffic Management Plans</option>
                                 <option>Road Safety Audits</option>
                                 <option>Traffic Impact Assessments</option>
@@ -593,7 +596,7 @@
                         <li><a href="terms-of-use.html">Terms of Use</a></li>
                     </ul>
                     <div class="social-links" style="display: flex; justify-content: center; gap: 1rem;">
-                        <a href="https://www.linkedin.com/company/fresh-engineering" target="_blank"
+                        <a href="https://www.linkedin.com/company/fresh-engineering" target="_blank" rel="noopener noreferrer"
                             aria-label="LinkedIn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor">
@@ -612,7 +615,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>

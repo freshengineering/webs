@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Enable JS-only scroll reveal (content stays visible if JS/CSS fails)
+    document.body.classList.add('js-reveal');
+
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -89,6 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerText;
+            const status = form.querySelector('.form-status');
+            const setStatus = (msg, ok) => {
+                if (!status) return;
+                status.textContent = msg;
+                status.classList.remove('is-success', 'is-error');
+                status.classList.add(ok ? 'is-success' : 'is-error');
+            };
 
             // Disable button and show loading state
             submitBtn.disabled = true;
@@ -107,21 +117,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    // Success
-                    alert('Thank you for your message! We will get back to you shortly.');
+                    setStatus('Thanks — your message has been sent. We’ll respond within one business day.', true);
                     form.reset();
                 } else {
-                    // Error from the server
                     const data = await response.json();
-                    if (Object.hasOwn(data, 'errors')) {
-                        alert(data.errors.map(error => error.message).join(", "));
-                    } else {
-                        alert('Oops! There was a problem submitting your form');
-                    }
+                    const msg = (data && data.errors)
+                        ? data.errors.map(error => error.message).join(', ')
+                        : 'Something went wrong. Please email info@freshengineering.com.au or call 0492 930 492.';
+                    setStatus(msg, false);
                 }
             } catch (error) {
-                // Network error
-                alert('Oops! There was a problem submitting your form');
+                setStatus('Network error. Please email info@freshengineering.com.au or call 0492 930 492.', false);
             } finally {
                 // Reset button state
                 submitBtn.disabled = false;
