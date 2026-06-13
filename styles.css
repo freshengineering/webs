@@ -335,6 +335,13 @@ header {
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
+.hero-cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 /* Related services block on service pages */
 .related-services {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
