@@ -287,7 +287,7 @@ h4 {
 
 h1 {
     font-size: clamp(2.5rem, 6.8vw, 4.7rem);
-    line-height: 1;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
 }
 
@@ -730,7 +730,6 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: var(--bg-panel);
     overflow: hidden;
-    cursor: pointer;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
 }
@@ -1101,6 +1100,10 @@ footer {
 
     h1 {
         font-size: 2.5rem;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem;
     }
 
     .about-grid,
