@@ -285,6 +285,19 @@ h4 {
     color: var(--text-primary);
 }
 
+h3,
+h4 {
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+.project-info h3,
+.area-col h3,
+.footer-services h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 h1 {
     font-size: clamp(2.5rem, 6.8vw, 4.7rem);
     line-height: 1.15;
@@ -794,9 +807,7 @@ header {
     letter-spacing: 0.1em;
     font-size: 0.8rem;
     font-weight: 600;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+    opacity: 1;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -883,11 +894,11 @@ header {
     border-right: 1px solid var(--border-glass);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .contact-details {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
