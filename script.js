@@ -17,33 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
+    // Close mobile menu when a nav link is clicked (CSS handles smooth scrolling)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
-
-                // Reset hamburger button
-                const mobileBtn = document.querySelector('.mobile-menu-btn');
                 if (mobileBtn) {
                     mobileBtn.classList.remove('active');
                     mobileBtn.setAttribute('aria-expanded', 'false');
                     mobileBtn.querySelectorAll('span').forEach(span => span.classList.remove('active'));
                 }
-            }
-
-            const targetSection = document.querySelector(this.getAttribute('href'));
-            if (targetSection) {
-                const headerOffset = 70;
-                const elementPosition = targetSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
             }
         });
     });

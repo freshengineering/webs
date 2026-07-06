@@ -30,12 +30,12 @@
     <meta property="og:type" content="website">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.freshengineering.com.au/">
-    <meta property="twitter:title" content="Fresh Engineering">
-    <meta property="twitter:description"
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.freshengineering.com.au/">
+    <meta name="twitter:title" content="Fresh Engineering">
+    <meta name="twitter:description"
         content="Fresh Engineering - Melbourne traffic engineering & traffic management consultancy. Expert TMPs, RSAs, Traffic Impact Assessments & compliance audits for major infrastructure projects.">
-    <meta property="twitter:image" content="https://www.freshengineering.com.au/og-image.png">
+    <meta name="twitter:image" content="https://www.freshengineering.com.au/og-image.png">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -54,13 +54,33 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://www.freshengineering.com.au/#organization",
   "name": "Fresh Engineering",
+  "alternateName": "Fresh Engineering Pty Ltd",
   "legalName": "Fresh Engineering Pty Ltd",
+  "description": "Professional traffic engineering, road safety audits, and traffic management services across Melbourne and Victoria",
   "image": "https://www.freshengineering.com.au/fresh-logo.png",
-  "@id": "https://www.freshengineering.com.au",
+  "logo": "https://www.freshengineering.com.au/fresh-logo.png",
   "url": "https://www.freshengineering.com.au",
   "telephone": "+61492930492",
   "email": "info@freshengineering.com.au",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+61492930492",
+    "email": "info@freshengineering.com.au",
+    "contactType": "customer service",
+    "areaServed": "AU",
+    "availableLanguage": "English"
+  },
+  "knowsAbout": [
+    "Traffic Engineering",
+    "Road Safety Audits",
+    "Traffic Management Plans",
+    "Traffic Impact Assessments",
+    "AGTTM",
+    "DTP (VicRoads) Compliance",
+    "Construction Traffic Management"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Melbourne",
@@ -95,7 +115,7 @@
   },
   "sameAs": [
     "https://www.linkedin.com/company/fresh-engineering",
-    "https://share.google/tBG2RqmnMaKxI74eX"
+    "https://www.google.com/search?kgmid=/g/11n4f7cc54&q=Fresh+Engineering"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -147,49 +167,9 @@
   }
 }
 </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.freshengineering.com.au/#organization",
-  "name": "Fresh Engineering",
-  "alternateName": "Fresh Engineering Pty Ltd",
-  "url": "https://www.freshengineering.com.au",
-  "logo": "https://www.freshengineering.com.au/fresh-logo.png",
-  "description": "Professional traffic engineering, road safety audits, and traffic management services across Melbourne and Victoria",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Melbourne",
-    "addressRegion": "VIC",
-    "addressCountry": "AU"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+61492930492",
-    "email": "info@freshengineering.com.au",
-    "contactType": "customer service",
-    "areaServed": "AU",
-    "availableLanguage": "English"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/fresh-engineering",
-    "https://share.google/tBG2RqmnMaKxI74eX"
-  ],
-  "knowsAbout": [
-    "Traffic Engineering",
-    "Road Safety Audits",
-    "Traffic Management Plans",
-    "Traffic Impact Assessments",
-    "AGTTM",
-    "DTP (VicRoads) Compliance",
-    "Construction Traffic Management"
-  ]
-}
-</script>
-
     <link rel="preload" as="image" href="fresh-hero.jpg" fetchpriority="high">
     <!-- Design Rules: Global Styles & Typography -->
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Enforcing Jost as per Design Rules -->
@@ -231,11 +211,13 @@
         </div>
     </header>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg"></div>
-        <div class="container hero-content" id="main-content">
-            <h1>FRESH PERSPECTIVES.<br>PROVEN TRAFFIC EXPERIENCE.</h1>
+        <div class="container hero-content">
+            <p class="hero-eyebrow">FRESH PERSPECTIVES. PROVEN TRAFFIC EXPERIENCE.</p>
+            <h1>Traffic Engineering &amp; Road Safety Consultants &mdash; Melbourne &amp; Victoria</h1>
             <p class="hero-subtitle">Traffic Engineering &amp; Road Safety Audit specialists serving Melbourne and Victoria.</p>
             <div class="hero-cta">
                 <a href="#contact" class="btn-primary" style="text-decoration: none;">Get a Quote</a>
@@ -256,8 +238,7 @@
 
             <div class="services-grid">
                 <!-- Service 1 -->
-                <div class="service-card" onclick="location.href='traffic-management-plans.html';"
-                    style="cursor: pointer;">
+                <div class="service-card">
                     <div class="icon-box">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
@@ -269,7 +250,7 @@
                         designed to local and Australian Standards.</p>
                 </div>
                 <!-- Service 2 -->
-                <div class="service-card" onclick="location.href='road-safety-audits.html';" style="cursor: pointer;">
+                <div class="service-card">
                     <div class="icon-box">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
@@ -281,8 +262,7 @@
                         and providing practical recommendations.</p>
                 </div>
                 <!-- Service 3 -->
-                <div class="service-card" onclick="location.href='traffic-impact-assessments.html';"
-                    style="cursor: pointer;">
+                <div class="service-card">
                     <div class="icon-box">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
@@ -293,7 +273,7 @@
                     <p>Comprehensive traffic analysis reports to support road authority applications.</p>
                 </div>
                 <!-- Service 4 -->
-                <div class="service-card" onclick="location.href='compliance-audits.html';" style="cursor: pointer;">
+                <div class="service-card">
                     <div class="icon-box">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
@@ -307,7 +287,7 @@
                         regulatory standards.</p>
                 </div>
                 <!-- Service 5 -->
-                <div class="service-card" onclick="location.href='technical-advice.html';" style="cursor: pointer;">
+                <div class="service-card">
                     <div class="icon-box">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
@@ -322,7 +302,7 @@
                         engineering problems.</p>
                 </div>
                 <!-- Service 6 -->
-                <div class="service-card" onclick="location.href='tenders-project-delivery.html';" style="cursor: pointer;">
+                <div class="service-card">
                     <div class="icon-box">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
@@ -334,8 +314,7 @@
                     <p>Dedicated support from tender preparation through to complete project delivery.</p>
                 </div>
                 <!-- Service 7 -->
-                <div class="service-card" onclick="location.href='car-parking-assessments.html';"
-                    style="cursor: pointer;">
+                <div class="service-card">
                     <div class="icon-box">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
@@ -349,7 +328,7 @@
                     <p>Data-driven car parking demand assessments to justify reductions or optimise layouts.</p>
                 </div>
                 <!-- Service 8 -->
-                <div class="service-card" onclick="location.href='risk-assessments.html';" style="cursor: pointer;">
+                <div class="service-card">
                     <div class="icon-box">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
@@ -622,6 +601,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -652,12 +632,12 @@
             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
                 <span>&copy; 2026 Fresh Engineering Pty Ltd</span>
                 <span>Melbourne, VIC</span>
-                <span style="font-size: 0.9em; opacity: 0.7;">ABN: 63 673 624 863</span>
+                <span style="font-size: 0.9em;">ABN: 63 673 624 863</span>
             </div>
         </div>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 </body>
 
 </html>

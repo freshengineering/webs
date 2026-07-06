@@ -39,7 +39,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
-.service-card:focus-visible,
+.service-card:focus-within,
 [tabindex]:focus-visible {
     outline: 3px solid var(--accent-cyan);
     outline-offset: 2px;
@@ -665,11 +665,20 @@ header {
 }
 
 .service-card {
+    position: relative;
+    cursor: pointer;
     background: var(--bg-panel);
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 3rem;
     transition: all 0.3s;
     border-radius: 0;
+}
+
+/* Stretched link: the whole card acts as the h3 link's hit area */
+.service-card h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 }
 
 .service-card:hover {
