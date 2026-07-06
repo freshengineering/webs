@@ -849,6 +849,7 @@ header {
 
 .about-img {
     width: 100%;
+    height: auto;
     border-radius: 0;
     filter: grayscale(100%) contrast(1.1);
     transition: 0.5s;
