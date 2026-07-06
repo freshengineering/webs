@@ -180,6 +180,19 @@ textarea:focus-visible,
     margin: 0;
 }
 
+/* Inline links in service-page body copy */
+.about-text p a,
+.service-content-block a {
+    color: var(--accent-cyan);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.about-text p a:hover,
+.service-content-block a:hover {
+    color: var(--accent-glow);
+}
+
 /* Areas We Serve */
 .areas-grid {
     display: grid;
@@ -991,6 +1004,31 @@ footer {
 
 .footer-links a:hover {
     color: white;
+}
+
+/* Footer services list */
+.footer-services {
+    margin: 0.5rem 0 1rem;
+}
+
+.footer-services h4 {
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.footer-services-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.8rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-services-list li {
+    margin-bottom: 0;
 }
 
 .copyright {

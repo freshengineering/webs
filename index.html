@@ -169,7 +169,7 @@
 </script>
     <link rel="preload" as="image" href="fresh-hero.jpg" fetchpriority="high">
     <!-- Design Rules: Global Styles & Typography -->
-    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="styles.css?v=9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Enforcing Jost as per Design Rules -->
@@ -606,30 +606,39 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-grid" style="grid-template-columns: 1fr; text-align: center; gap: 2rem;">
-                <div class="footer-col">
-                    <img src="images/footer-fresh-logo-v2.png" alt="Fresh Engineering" class="footer-logo-img">
-                    <ul class="footer-links"
-                        style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-align: center;">
+                <img src="images/footer-fresh-logo-v2.png" alt="Fresh Engineering" class="footer-logo-img">
+                <ul class="footer-links"
+                    style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 1rem 0;">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#projects">Projects</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use.html">Terms of Use</a></li>
+                </ul>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul class="footer-links footer-services-list">
+                        <li><a href="/road-safety-audits.html">Road Safety Audits</a></li>
+                        <li><a href="/traffic-management-plans.html">Traffic Management Plans</a></li>
+                        <li><a href="/traffic-impact-assessments.html">Traffic Impact Assessments</a></li>
+                        <li><a href="/car-parking-assessments.html">Car Parking Assessments</a></li>
+                        <li><a href="/compliance-audits.html">Compliance Audits</a></li>
+                        <li><a href="/risk-assessments.html">Risk Assessments</a></li>
+                        <li><a href="/technical-advice.html">Technical Advice</a></li>
+                        <li><a href="/tenders-project-delivery.html">Tenders &amp; Project Delivery</a></li>
                     </ul>
-                    <div class="social-links" style="display: flex; justify-content: center; gap: 1rem;">
-                        <a href="https://www.linkedin.com/company/fresh-engineering" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </a>
-                    </div>
                 </div>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                <div class="social-links" style="display: flex; justify-content: center; gap: 1rem;">
+                    <a href="https://www.linkedin.com/company/fresh-engineering" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
                 <span>&copy; 2026 Fresh Engineering Pty Ltd</span>
                 <span>Melbourne, VIC</span>
                 <span style="font-size: 0.9em;">ABN: 63 673 624 863</span>
