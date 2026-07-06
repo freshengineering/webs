@@ -6,7 +6,6 @@
 
     --accent-cyan: #06b6d4;
     --accent-glow: #22d3ee;
-    --accent-amber: #f59e0b;
 
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
@@ -489,7 +488,9 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-    margin-left: 20px;
+    padding: 12px;
+    margin-left: 8px;
+    margin-right: -12px;
 }
 
 .mobile-menu-btn span {
@@ -734,8 +735,7 @@ header {
     transition: all 0.3s ease;
 }
 
-.project-card:hover,
-.project-card.active {
+.project-card:hover {
     border-color: var(--accent-cyan);
     box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.1), 0 4px 6px -2px rgba(6, 182, 212, 0.05);
     transform: translateY(-5px);
@@ -750,8 +750,7 @@ header {
     filter: grayscale(20%);
 }
 
-.project-card:hover .project-img,
-.project-card.active .project-img {
+.project-card:hover .project-img {
     transform: scale(1.1);
     opacity: 0.6;
     filter: grayscale(0%);
@@ -774,8 +773,7 @@ header {
     transition: opacity 0.4s ease;
 }
 
-.project-card:hover .project-info,
-.project-card.active .project-info {
+.project-card:hover .project-info {
     opacity: 1;
 }
 
@@ -787,8 +785,7 @@ header {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.project-card:hover .project-info h3,
-.project-card.active .project-info h3 {
+.project-card:hover .project-info h3 {
     transform: translateY(0);
 }
 
@@ -804,8 +801,7 @@ header {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.project-card:hover .project-cat,
-.project-card.active .project-cat {
+.project-card:hover .project-cat {
     transform: translateY(0);
     opacity: 1;
 }
@@ -1144,7 +1140,6 @@ footer {
     background: #0077b5;
     /* LinkedIn Blue */
     color: white;
-    color: #0077b5;
     border-color: #0077b5;
     transform: translateY(-3px);
 }

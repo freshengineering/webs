@@ -17,18 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const closeMobileMenu = () => {
+        if (navLinks && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            if (mobileBtn) {
+                mobileBtn.classList.remove('active');
+                mobileBtn.setAttribute('aria-expanded', 'false');
+                mobileBtn.querySelectorAll('span').forEach(span => span.classList.remove('active'));
+            }
+        }
+    };
+
     // Close mobile menu when a nav link is clicked (CSS handles smooth scrolling)
     document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                if (mobileBtn) {
-                    mobileBtn.classList.remove('active');
-                    mobileBtn.setAttribute('aria-expanded', 'false');
-                    mobileBtn.querySelectorAll('span').forEach(span => span.classList.remove('active'));
-                }
-            }
-        });
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close mobile menu on Escape or click outside the nav
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMobileMenu();
+    });
+    document.addEventListener('click', (e) => {
+        if (navLinks && navLinks.classList.contains('active') &&
+            !navLinks.contains(e.target) && mobileBtn && !mobileBtn.contains(e.target)) {
+            closeMobileMenu();
+        }
     });
 
     // Intersection Observer for Fade-in Animations
@@ -52,19 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
-    });
-
-    // Project Cards - Tap to Reveal (Mobile)
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('click', function () {
-            // Remove active class from all other cards (accordion behavior)
-            projectCards.forEach(c => {
-                if (c !== this) c.classList.remove('active');
-            });
-            // Toggle active class on clicked card
-            this.classList.toggle('active');
-        });
     });
 
     // Simple Form Submission Handler (Prevent default reload)
