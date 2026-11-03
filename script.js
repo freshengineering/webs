@@ -67,6 +67,27 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Analytics: count enquiries (form sends, phone taps, email taps) in GA4
+    const track = (name, params) => {
+        if (typeof window.gtag === 'function') window.gtag('event', name, params);
+    };
+    const linkPlace = (el) => {
+        if (el.closest('header')) return 'header';
+        if (el.closest('.hero, .page-hero')) return 'hero';
+        if (el.closest('#contact')) return 'contact';
+        if (el.closest('footer')) return 'footer';
+        return 'page';
+    };
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!link) return;
+        const isPhone = link.getAttribute('href').startsWith('tel:');
+        track(isPhone ? 'click_to_call' : 'click_email', {
+            link_location: linkPlace(link),
+            page_path: location.pathname
+        });
+    });
+
     // Simple Form Submission Handler (Prevent default reload)
     const form = document.querySelector('.contact-form');
     if (form) {
@@ -101,6 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     setStatus('Thanks — your message has been sent. We’ll respond within one business day.', true);
+                    const subject = form.querySelector('input[name="subject"]');
+                    track('generate_lead', {
+                        lead_source: 'contact_form',
+                        form_subject: subject ? subject.value : 'General enquiry',
+                        page_path: location.pathname
+                    });
                     form.reset();
                 } else {
                     const data = await response.json();
