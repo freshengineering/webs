@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 
 <head>
     <meta charset="UTF-8">
@@ -41,7 +41,10 @@
       "@type": "Service",
       "serviceType": "Compliance Audits",
       "provider": {
-        "@id": "https://www.freshengineering.com.au/#organization"
+        "@type": "ProfessionalService",
+        "@id": "https://www.freshengineering.com.au/#organization",
+        "name": "Fresh Engineering",
+        "url": "https://www.freshengineering.com.au/"
       },
       "areaServed": {
         "@type": "State",
@@ -61,7 +64,7 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.freshengineering.com.au"
+          "item": "https://www.freshengineering.com.au/"
         },
         {
           "@type": "ListItem",
@@ -89,7 +92,7 @@
       "name": "How is a compliance audit different from a road safety audit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A road safety audit asks whether a road or design is safe; a compliance audit asks whether the setup on the ground matches what was approved. We do both."
+        "text": "A road safety audit looks for where crash risk remains in a road or design; a compliance audit asks whether the setup on the ground matches what was approved. We do both."
       }
     },
     {
@@ -129,30 +132,12 @@
     </script>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css?v=15">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20">
+    <link rel="preload" href="/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <style>
-        .page-hero {
-            min-height: 400px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background: linear-gradient(to right, #020617, #0f172a);
-            padding: 140px 0 60px;
-        }
-
-        .page-hero-content {
-            position: relative;
-            z-index: 1;
-        }
-    </style>
 </head>
 
 <body>
@@ -162,7 +147,7 @@
     <header>
         <div class="header-ribbon">
             <a href="/" class="logo-link">
-                <img src="fresh-logo.png" alt="Fresh Engineering" class="logo-img">
+                <img src="fresh-logo.png" alt="Fresh Engineering" class="logo-img" width="391" height="220">
             </a>
             <nav class="nav-links">
                 <a href="/">Home</a>
@@ -186,14 +171,14 @@
     <main id="main-content">
 
     <!-- Page Hero -->
-    <section class="page-hero">
+    <section class="page-hero" style="--hero-img: url('/images/project-pw2pa.webp')">
         <div class="container page-hero-content">
             <h1>Compliance Audits in Melbourne &amp; Victoria</h1>
-            <p style="color: var(--accent-cyan); font-size: 1.2rem; font-weight: 500;">Ensuring Site Safety & Regulatory
+            <p class="page-hero-tagline">Ensuring Site Safety & Regulatory
                 Compliance</p>
             <div class="hero-cta">
-                <a href="#contact" class="btn-primary" style="text-decoration: none;">Get a Free Quote</a>
-                <a href="tel:+61492930492" class="btn-secondary" style="text-decoration: none;">Call 0492 930 492</a>
+                <a href="#contact" class="btn-primary">Get a Free Quote</a>
+                <a href="tel:+61492930492" class="btn-secondary">Call 0492 930 492</a>
             </div>
         </div>
     </section>
@@ -205,13 +190,13 @@
                 <div class="about-text">
                     <h2>Traffic Management Compliance Audits</h2>
                     <p>A compliance audit is an independent on-site check that the traffic management actually set up on the ground matches the approved <a href="traffic-management-plans.html">TGS or TMP</a>, the permit conditions and AGTTM. We're a separate set of eyes confirming what's in the field reflects what was signed off.</p>
-                    <p>We audit across Melbourne metro and regional Victoria, day or night. With TMD Cat 1/2/3 accreditation, road safety auditor accreditation and 15+ years on jobs from council works to North East Link and the Level Crossing Removal Program, we check the setup the way the road authority will.</p>
+                    <p>We audit across Melbourne metro and regional Victoria, day or night. With TMD Cat 1/2/3 accreditation, Senior Road Safety Auditor accreditation and 15+ years on jobs from council works to North East Link and the Level Crossing Removal Program, we check the setup the way the road authority will.</p>
                 </div>
                 <div class="service-panel">
                     <h3>Why Fresh Engineering</h3>
                     <ul>
                         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Traffic Management Designer (TMD) Cat 1, 2 &amp; 3</li>
-                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Accredited Road Safety Auditor</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Senior Road Safety Auditor</li>
                         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> 15+ years, council to Tier 1 projects</li>
                         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> AGTTM &amp; Austroads compliant</li>
                         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Melbourne metro &amp; regional Victoria</li>
@@ -257,7 +242,7 @@
                 <div class="faq-list">
                     <div class="faq-item">
                         <h3>How is a compliance audit different from a road safety audit?</h3>
-                        <p>A <a href="road-safety-audits.html">road safety audit</a> asks whether a road or design is safe; a compliance audit asks whether the setup on the ground matches what was approved. We do both.</p>
+                        <p>A <a href="road-safety-audits.html">road safety audit</a> looks for where crash risk remains in a road or design; a compliance audit asks whether the setup on the ground matches what was approved. We do both.</p>
                     </div>
                     <div class="faq-item">
                         <h3>When do we need one?</h3>
@@ -316,14 +301,14 @@
                                 </path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
-                            <span><a href="mailto:info@freshengineering.com.au" style="color:inherit;text-decoration:none;">info@freshengineering.com.au</a></span>
+                            <span><a href="mailto:info@freshengineering.com.au">info@freshengineering.com.au</a></span>
                         </div>
                         <div class="info-item">
                             <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path>
                             </svg>
-                            <span><a href="tel:+61492930492" style="color:inherit;text-decoration:none;">0492 930 492</a></span>
+                            <span><a href="tel:+61492930492">0492 930 492</a></span>
                         </div>
                         <div class="info-item">
                             <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -339,15 +324,15 @@
                 <div class="contact-form-wrapper">
                     <form class="contact-form" action="https://formspree.io/f/xdaglvjp" method="POST">
                         <div class="form-status" role="status" aria-live="polite"></div>
-                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <input type="hidden" name="subject" value="New Inquiry for Compliance Audit">
                         <div class="form-group">
                             <label class="form-label" for="name">Full Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
+                            <input type="text" id="name" name="name" class="form-input" autocomplete="name" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="email">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
+                            <input type="email" id="email" name="email" class="form-input" autocomplete="email" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="phone">Phone (optional)</label>
@@ -357,7 +342,7 @@
                             <label class="form-label" for="message">Message</label>
                             <textarea id="message" name="message" class="form-textarea" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary" style="width: 100%;">Send Inquiry</button>
+                        <button type="submit" class="btn-primary btn-block">Send Inquiry</button>
                     </form>
                 </div>
             </div>
@@ -369,10 +354,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-align: center;">
-                <img src="images/footer-fresh-logo-v2.png" alt="Fresh Engineering" class="footer-logo-img">
-                <ul class="footer-links"
-                    style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 1rem 0;">
+            <div class="footer-inner">
+                <img src="images/footer-fresh-logo-v2.png" alt="Fresh Engineering" class="footer-logo-img" width="342" height="192">
+                <ul class="footer-links footer-main-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/#services">Services</a></li>
                     <li><a href="/#projects">Projects</a></li>
@@ -393,7 +377,7 @@
                         <li><a href="/tenders-project-delivery.html">Tenders &amp; Project Delivery</a></li>
                     </ul>
                 </div>
-                <div class="social-links" style="display: flex; justify-content: center; gap: 1rem;">
+                <div class="social-links">
                     <a href="https://www.linkedin.com/company/fresh-engineering" target="_blank" rel="noopener noreferrer"
                         aria-label="LinkedIn">
                         <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -405,7 +389,7 @@
                 </div>
                 <span>&copy; 2026 Fresh Engineering Pty Ltd</span>
                 <span>Melbourne, VIC</span>
-                <span style="font-size: 0.9em;">ABN: 63 673 624 863</span>
+                <span class="footer-abn">ABN: 63 673 624 863</span>
             </div>
         </div>
     </footer>
