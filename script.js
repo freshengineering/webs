@@ -122,10 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     setStatus('Thanks — your message has been sent. We’ll respond within one business day.', true);
-                    const subject = form.querySelector('input[name="subject"]');
+                    const field = (n) => {
+                        const el = form.querySelector('[name="' + n + '"]');
+                        return el && el.value ? el.value : undefined;
+                    };
                     track('generate_lead', {
                         lead_source: 'contact_form',
-                        form_subject: subject ? subject.value : 'General enquiry',
+                        form_subject: field('subject') || 'General enquiry',
+                        service: field('service'),
+                        audit_stage: field('audit_stage'),
+                        road_authority: field('road_authority'),
                         page_path: location.pathname
                     });
                     form.reset();

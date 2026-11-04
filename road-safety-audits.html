@@ -425,6 +425,34 @@
                             <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" placeholder="0400 000 000">
                         </div>
                         <div class="form-group">
+                            <label class="form-label" for="audit_stage">Audit stage (optional)</label>
+                            <select id="audit_stage" name="audit_stage" class="form-input">
+                                <option value="">Select…</option>
+                                <option>Feasibility</option>
+                                <option>Preliminary design</option>
+                                <option>Detailed design</option>
+                                <option>Pre-opening</option>
+                                <option>Post-opening</option>
+                                <option>Existing road</option>
+                                <option>Roadworks / temporary traffic management</option>
+                                <option>Not sure yet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="road_authority">Whose road is it? (optional)</label>
+                            <select id="road_authority" name="road_authority" class="form-input">
+                                <option value="">Select…</option>
+                                <option>Council road</option>
+                                <option>DTP (arterial) road</option>
+                                <option>Private or internal road</option>
+                                <option>Not sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="location">Project location (optional)</label>
+                            <input type="text" id="location" name="location" class="form-input" placeholder="Suburb or council">
+                        </div>
+                        <div class="form-group">
                             <label class="form-label" for="message">Message</label>
                             <textarea id="message" name="message" class="form-textarea" rows="4" required></textarea>
                         </div>
@@ -480,7 +508,7 @@
         </div>
     </footer>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
 </body>
 
 </html>

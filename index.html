@@ -533,8 +533,8 @@
                             <label class="form-label" for="service">Service Required</label>
                             <select id="service" name="service" class="form-input" required>
                                 <option value="" disabled selected>Select a service…</option>
-                                <option>Traffic Management Plans</option>
                                 <option>Road Safety Audits</option>
+                                <option>Traffic Management Plans</option>
                                 <option>Traffic Impact Assessments</option>
                                 <option>Compliance Audits</option>
                                 <option>Technical Advice</option>
@@ -543,6 +543,20 @@
                                 <option>Risk Assessments</option>
                                 <option>Other</option>
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="road_authority">Whose road is it? (optional)</label>
+                            <select id="road_authority" name="road_authority" class="form-input">
+                                <option value="">Select…</option>
+                                <option>Council road</option>
+                                <option>DTP (arterial) road</option>
+                                <option>Private or internal road</option>
+                                <option>Not sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="location">Project location (optional)</label>
+                            <input type="text" id="location" name="location" class="form-input" placeholder="Suburb or council">
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="message">Message</label>
@@ -600,7 +614,7 @@
         </div>
     </footer>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
 </body>
 
 </html>
