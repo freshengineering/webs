@@ -1317,64 +1317,24 @@ footer {
     flex-shrink: 0;
 }
 
-.hero-projects {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(2, 6, 23, 0.65);
-}
-
-.hero-projects p {
-    max-width: none;
-    margin: 0;
-    padding: 1rem 0;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    letter-spacing: 0.02em;
-}
-
-.hero-projects strong {
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-right: 0.4rem;
-}
-
 /* Alternate section backgrounds on the homepage */
 #services,
 #about {
     background: var(--bg-surface);
 }
 
-/* Services: road safety audits featured */
-@media (min-width: 1000px) {
+/* Services: 2 columns on tablets, 4 on wide screens (8 cards) */
+@media (min-width: 700px) {
     .services-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .service-card--feature {
-        grid-column: span 2;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-.service-card--feature {
-    border-color: var(--accent-cyan);
-    background: rgba(6, 182, 212, 0.06);
-}
-
-.service-card--feature h3 {
-    font-size: 1.6rem;
-}
-
-.service-card-eyebrow {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--accent-glow);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+@media (min-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
 }
 
 .service-card-links {
@@ -1420,13 +1380,8 @@ footer {
 
     .service-card p,
     .service-card .card-more,
-    .service-card .service-card-links,
-    .service-card .service-card-eyebrow {
+    .service-card .service-card-links {
         grid-column: 1 / -1;
-    }
-
-    .service-card .service-card-eyebrow {
-        grid-row: 1;
     }
 
     .service-card p {
@@ -1773,9 +1728,5 @@ details.faq-item p {
 
     body {
         padding-bottom: 56px;
-    }
-
-    .hero-projects {
-        display: none;
     }
 }
