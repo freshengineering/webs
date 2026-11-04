@@ -72,6 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof window.gtag === 'function') window.gtag('event', name, params);
     };
     const linkPlace = (el) => {
+        if (el.closest('.mobile-cta')) return 'mobile_bar';
+        if (el.closest('.service-aside')) return 'side_card';
+        if (el.closest('.cta-band')) return 'mid_page';
         if (el.closest('header')) return 'header';
         if (el.closest('.hero, .page-hero')) return 'hero';
         if (el.closest('#contact')) return 'contact';
@@ -79,6 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'page';
     };
     document.addEventListener('click', (e) => {
+        const quote = e.target.closest('a[href="#contact"], a[href="/#contact"]');
+        if (quote) {
+            track('click_quote', { link_location: linkPlace(quote), page_path: location.pathname });
+            return;
+        }
         const link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
         if (!link) return;
         const isPhone = link.getAttribute('href').startsWith('tel:');
@@ -87,6 +95,18 @@ document.addEventListener('DOMContentLoaded', () => {
             page_path: location.pathname
         });
     });
+
+    // Phones: hide the Call / Get a quote bar while the hero buttons, contact form or footer are on screen
+    const bar = document.querySelector('.mobile-cta');
+    const contactEls = [document.querySelector('.hero, .page-hero'), document.getElementById('contact'), document.querySelector('footer')].filter(Boolean);
+    if (bar && contactEls.length && 'IntersectionObserver' in window) {
+        const visible = new Set();
+        const barObserver = new IntersectionObserver((entries) => {
+            entries.forEach(en => en.isIntersecting ? visible.add(en.target) : visible.delete(en.target));
+            bar.classList.toggle('is-hidden', visible.size > 0);
+        });
+        contactEls.forEach(el => barObserver.observe(el));
+    }
 
     // Simple Form Submission Handler (Prevent default reload)
     const form = document.querySelector('.contact-form');
