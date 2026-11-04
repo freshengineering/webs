@@ -904,7 +904,7 @@ header {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Keyboard focus must stay visible on the enquiry form — this is the site's conversion path
+/* Keyboard focus must stay visible on the enquiry form; this is the site's conversion path
    and a government-facing business should not fail WCAG 2.4.7 on it. The previous
    `outline: none` here out-specified the :focus-visible rule at the top of this file, so
    keyboard users got only a 1px border colour change. */

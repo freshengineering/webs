@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    setStatus('Thanks — your message has been sent. We’ll respond within one business day.', true);
+                    setStatus('Thanks, your message has been sent. We’ll respond within one business day.', true);
                     const field = (n) => {
                         const el = form.querySelector('[name="' + n + '"]');
                         return el && el.value ? el.value : undefined;
