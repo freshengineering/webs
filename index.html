@@ -165,7 +165,7 @@
 </script>
     <link rel="preload" as="image" href="fresh-hero-800.webp" type="image/webp" fetchpriority="high" media="(max-width: 800px)">
     <link rel="preload" as="image" href="fresh-hero.webp" type="image/webp" fetchpriority="high" media="(min-width: 801px)">
-    <link rel="stylesheet" href="styles.css?v=24">
+    <link rel="stylesheet" href="styles.css?v=25">
     <link rel="preload" href="/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -208,7 +208,7 @@
             <h1>Road safety audits &amp;<br> traffic engineering <span class="hero-location">Melbourne &amp; Victoria</span></h1>
             <p class="hero-subtitle">For councils, DTP, developers and contractors.</p>
             <ul class="hero-proof" aria-label="Credentials">
-                <li>Senior Road Safety Auditor</li>
+                <li>2 accredited auditors, incl. a Senior Road Safety Auditor</li>
                 <li>TMD Cat 1&ndash;3</li>
                 <li>15+ years in Victoria</li>
             </ul>
@@ -300,6 +300,21 @@
         </div>
     </section>
 
+    <!-- Guides -->
+    <section id="guides" class="section insights-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Guides</h2>
+                <p>Plain-English guides to what road authorities and councils ask for.</p>
+            </div>
+            <div class="guide-cards insights-grid">
+                <a href="car-parking-reduction-victoria.html" class="guide-card"><span class="guide-card-label">Guide &middot; November 2026</span><span class="guide-card-title">Car parking reductions in Victoria</span><span class="guide-card-desc">What council needs to see under Clause 52.06 &rarr;</span></a>
+                <a href="when-do-you-need-a-road-safety-audit.html" class="guide-card"><span class="guide-card-label">Guide &middot; November 2026</span><span class="guide-card-title">When do you need a road safety audit?</span><span class="guide-card-desc">Requirements, stages and timing in Victoria &rarr;</span></a>
+                <a href="road-safety-audit-cost.html" class="guide-card"><span class="guide-card-label">Guide &middot; November 2026</span><span class="guide-card-title">What does a road safety audit cost?</span><span class="guide-card-desc">What drives the price and what to send &rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Gallery -->
     <section id="projects" class="section">
         <div class="container">
@@ -385,10 +400,11 @@
                     <p>Fresh Engineering has worked on everything from small council jobs to major Tier 1
                         infrastructure projects. We know what gets built and what road authorities will approve,
                         and we keep our advice clear and practical.</p>
+                    <p class="about-register">We have two accredited auditors on the <a href="https://vicdtp-rsa.austroads.gov.au/" target="_blank" rel="noopener noreferrer">Victorian Road Safety Auditors Register</a>, including a Senior Road Safety Auditor who leads our audits. Austroads manages the register for the Department of Transport and Planning.</p>
                 </div>
                 <div class="about-stats" aria-label="Credentials">
                     <div class="about-stat"><span class="about-stat-value">15+</span><span class="about-stat-label">Years experience</span></div>
-                    <div class="about-stat"><span class="about-stat-value">Senior</span><span class="about-stat-label">Accredited Road Safety Auditor</span></div>
+                    <div class="about-stat"><span class="about-stat-value">2</span><span class="about-stat-label">Accredited road safety auditors, incl. a Senior</span></div>
                     <div class="about-stat"><span class="about-stat-value">Cat 1&ndash;3</span><span class="about-stat-label">Traffic Management Designer (TMD)</span></div>
                     <div class="about-stat"><span class="about-stat-value">ASHTAS</span><span class="about-stat-label">Road Safety Barrier Accredited</span></div>
                 </div>
@@ -498,45 +514,29 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label class="form-label" for="phone">Phone (optional)</label>
-                                <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" placeholder="0400 000 000">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="location">Project location (optional)</label>
-                                <input type="text" id="location" name="location" class="form-input" placeholder="Suburb or council">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
                                 <label class="form-label" for="service">Service required</label>
                                 <select id="service" name="service" class="form-input" required>
                                     <option value="" disabled selected>Select a service…</option>
-                                    <option>Road Safety Audits</option>
-                                    <option>Traffic Management Plans</option>
-                                    <option>Traffic Impact Assessments</option>
-                                    <option>Compliance Audits</option>
-                                    <option>Technical Advice</option>
-                                    <option>Tenders & Project Delivery</option>
-                                    <option>Car Parking Demand Assessments</option>
-                                    <option>Risk Assessments</option>
+                                    <option>Road safety audits</option>
+                                    <option>Traffic management plans</option>
+                                    <option>Traffic impact assessments</option>
+                                    <option>Car parking demand assessments</option>
+                                    <option>Compliance audits</option>
+                                    <option>Risk assessments</option>
+                                    <option>Technical advice</option>
+                                    <option>Tenders &amp; project delivery</option>
                                     <option>Other</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="road_authority">Whose road is it? (optional)</label>
-                                <select id="road_authority" name="road_authority" class="form-input">
-                                    <option value="">Select…</option>
-                                    <option>Council road</option>
-                                    <option>DTP (arterial) road</option>
-                                    <option>Private or internal road</option>
-                                    <option>Not sure</option>
-                                </select>
+                                <label class="form-label" for="phone">Phone (optional)</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" placeholder="0400 000 000">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="message">Message</label>
                             <textarea id="message" name="message" class="form-textarea" rows="4"
-                                placeholder="How can we help?" required></textarea>
+                                placeholder="What the project involves, where it is and your timeframe" required></textarea>
                         </div>
                         <button type="submit" class="btn-primary btn-block">Send enquiry</button>
                     </form>

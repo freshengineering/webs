@@ -1900,3 +1900,29 @@ details.faq-item p {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
+
+
+/* Homepage: guides block and register line (Nov 2026) */
+.insights-section {
+    background: var(--bg-surface);
+}
+
+.insights-grid {
+    margin-top: 0;
+}
+
+.insights-section .guide-card {
+    background: var(--bg-void);
+}
+
+.about-register {
+    margin-top: 1.25rem;
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+}
+
+.about-register a {
+    color: var(--accent-glow);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
