@@ -29,6 +29,11 @@
     --gutter: clamp(20px, 5vw, 64px);
     --header-h: 84px;
     --radius: 4px;
+    --radius-ctl: 2px;
+    --bracket: 2px;
+    --br-x: 64px;
+    --br-y: 52px;
+    --br-gap: 14px;
     --section-space: clamp(64px, 9vw, 128px);
 
     --font-main: 'Jost', system-ui, sans-serif;
@@ -92,22 +97,10 @@ summary:focus-visible,
     border-radius: 2px;
 }
 
-/* Scroll reveal (only when JS is active; respects reduced motion) */
-.js-reveal .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.js-reveal .fade-in.visible {
-    opacity: 1;
-    transform: none;
-}
-
 @media (prefers-reduced-motion: reduce) {
-    .js-reveal .fade-in {
-        opacity: 1 !important;
-        transform: none !important;
+    *,
+    *::before,
+    *::after {
         transition: none !important;
     }
 
@@ -155,21 +148,24 @@ p {
     max-width: 68ch;
 }
 
+a[href^="tel:"] {
+    font-variant-numeric: tabular-nums;
+}
+
 strong {
     font-weight: 600;
     color: var(--ink);
 }
 
-/* Small uppercase label used above headings */
+/* Small sentence-case label used beside or above headings */
 .section-num,
 .eyebrow {
     display: block;
     margin: 0;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 500;
     color: var(--cyan-text);
+    letter-spacing: normal;
 }
 
 /* Layout */
@@ -222,7 +218,7 @@ strong {
     gap: 0.5rem;
     min-height: 52px;
     padding: 14px 28px;
-    border-radius: 999px;
+    border-radius: var(--radius-ctl);
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.005em;
@@ -349,7 +345,7 @@ header {
     color: var(--ink);
     font-weight: 600;
     font-size: 0.98rem;
-    border-radius: 999px;
+    border-radius: var(--radius-ctl);
     white-space: nowrap;
 }
 
@@ -440,12 +436,11 @@ header {
 }
 
 .hero-location {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
+    font-size: 0.95rem;
+    font-weight: 500;
     line-height: 1.4;
-    text-transform: uppercase;
     color: var(--cyan-text);
+    letter-spacing: normal;
 }
 
 .hero-side {
@@ -467,9 +462,14 @@ header {
     display: block;
     width: 100%;
     height: clamp(260px, 44vw, 600px);
+    padding: var(--br-gap);
     object-fit: cover;
-    border-radius: var(--radius);
-    background: var(--rule-soft);
+    background:
+        linear-gradient(var(--ink), var(--ink)) left top / var(--br-x) var(--bracket) no-repeat,
+        linear-gradient(var(--ink), var(--ink)) left top / var(--bracket) var(--br-y) no-repeat,
+        linear-gradient(var(--ink), var(--ink)) right bottom / var(--br-x) var(--bracket) no-repeat,
+        linear-gradient(var(--ink), var(--ink)) right bottom / var(--bracket) var(--br-y) no-repeat,
+        linear-gradient(var(--rule-soft), var(--rule-soft)) content-box;
 }
 
 /* Credentials strip */
@@ -493,10 +493,9 @@ header {
 
 .cred-kicker {
     color: var(--slate);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: normal;
 }
 
 .cred-text {
@@ -539,10 +538,9 @@ header {
 .service-group-title {
     margin: 0 0 0.75rem;
     color: var(--slate);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: normal;
 }
 
 .service-list {
@@ -573,21 +571,19 @@ header {
     line-height: 1.55;
 }
 
-/* Round arrow button used on list rows */
+/* Open chevron on list rows: the logo's corner bracket turned on its side */
 .service-arrow,
 .guide-card::after {
     flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--ink);
-    font-size: 1.1rem;
-    line-height: 1;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+    width: 11px;
+    height: 11px;
+    margin-right: 6px;
+    border-top: var(--bracket) solid var(--ink);
+    border-right: var(--bracket) solid var(--ink);
+    transform: rotate(45deg);
+    font-size: 0;
+    color: transparent;
+    transition: border-color 0.2s, transform 0.2s;
 }
 
 .service-list a:hover h3 {
@@ -596,9 +592,8 @@ header {
 
 .service-list a:hover .service-arrow,
 .guide-card:hover::after {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: var(--white);
+    border-color: var(--cyan-text);
+    transform: translateX(3px) rotate(45deg);
 }
 
 .service-guides {
@@ -663,10 +658,6 @@ header {
     color: var(--cyan-text);
     font-weight: 500;
     font-size: 0.98rem;
-}
-
-.client-links a::after {
-    content: " \2192";
 }
 
 .client-links a:hover {
@@ -868,11 +859,10 @@ header {
 
 .area-col h4 {
     margin: 0 0 1rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 500;
     color: var(--navy-muted);
+    letter-spacing: normal;
 }
 
 .area-col ul {
@@ -928,7 +918,7 @@ header {
 .guide-card {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 44px;
+    grid-template-columns: minmax(0, 1fr) 20px;
     column-gap: 1.5rem;
     align-items: center;
     padding: 1.6rem 0;
@@ -940,17 +930,16 @@ header {
 }
 
 .guide-card::after {
-    content: "\2192";
+    content: "";
     grid-column: 2;
     grid-row: 1 / span 3;
 }
 
 .guide-card-label {
     color: var(--slate);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: normal;
 }
 
 .guide-card-title {
@@ -1004,10 +993,9 @@ header {
 .contact-steps-title {
     margin: 2rem 0 0.75rem;
     color: var(--slate);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: normal;
 }
 
 .contact-steps {
@@ -1219,10 +1207,9 @@ footer {
 .footer-title {
     margin-bottom: 1rem;
     color: var(--navy-muted);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: normal;
 }
 
 .footer-links {
@@ -1232,6 +1219,7 @@ footer {
 }
 
 .footer-links a,
+.footer-links span,
 .footer-col > span {
     color: #e2e8f0;
     font-size: 0.98rem;
@@ -1254,7 +1242,7 @@ footer {
     width: 44px;
     height: 44px;
     border: 1px solid var(--navy-rule);
-    border-radius: 999px;
+    border-radius: var(--radius-ctl);
     color: var(--navy-text);
 }
 
@@ -1326,8 +1314,15 @@ footer {
     width: calc(min(var(--container-width), 100%) - 2 * var(--gutter));
     height: clamp(200px, 30vw, 420px);
     margin: clamp(2.5rem, 5vw, 4rem) auto 0;
-    border-radius: var(--radius);
-    background: var(--hero-img, linear-gradient(120deg, var(--navy), #13294b)) center / cover no-repeat, var(--rule-soft);
+    box-sizing: border-box;
+    padding: var(--br-gap);
+    background:
+        linear-gradient(var(--ink), var(--ink)) left top / var(--br-x) var(--bracket) no-repeat,
+        linear-gradient(var(--ink), var(--ink)) left top / var(--bracket) var(--br-y) no-repeat,
+        linear-gradient(var(--ink), var(--ink)) right bottom / var(--br-x) var(--bracket) no-repeat,
+        linear-gradient(var(--ink), var(--ink)) right bottom / var(--bracket) var(--br-y) no-repeat,
+        var(--hero-img, linear-gradient(120deg, var(--navy), #13294b)) center / cover no-repeat content-box,
+        linear-gradient(var(--rule-soft), var(--rule-soft)) content-box;
 }
 
 /* Service pages: content plus a quote card that stays in view */
@@ -1379,9 +1374,82 @@ footer {
 .service-panel,
 .aside-quote {
     background: var(--white);
-    border-radius: var(--radius);
     padding: 1.75rem;
-    box-shadow: 0 1px 2px rgba(11, 20, 38, 0.06), 0 12px 32px rgba(11, 20, 38, 0.06);
+}
+
+/* Corner brackets from the logo, used on the title block and main photos */
+.service-panel {
+    position: relative;
+    margin: 10px 10px 18px;
+}
+
+.service-panel::before,
+.service-panel::after {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 36px;
+    pointer-events: none;
+}
+
+.service-panel::before {
+    top: -10px;
+    left: -10px;
+    border-top: var(--bracket) solid var(--ink);
+    border-left: var(--bracket) solid var(--ink);
+}
+
+.service-panel::after {
+    right: -10px;
+    bottom: -10px;
+    border-right: var(--bracket) solid var(--ink);
+    border-bottom: var(--bracket) solid var(--ink);
+}
+
+.aside-quote {
+    margin: 0 10px;
+    background: var(--navy);
+}
+
+/* Title block: label and value side by side, like the corner of a drawing sheet */
+.title-block {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    border-top: 1px solid var(--rule-soft);
+}
+
+.title-block dt,
+.title-block dd {
+    margin: 0;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 0.98rem;
+    line-height: 1.45;
+}
+
+.title-block dt {
+    padding-right: 1.25rem;
+    color: var(--slate);
+}
+
+.title-block dd {
+    color: var(--ink);
+}
+
+.aside-quote p {
+    color: var(--navy-text);
+}
+
+.aside-quote .aside-quote-title {
+    color: var(--white);
+}
+
+.aside-quote .aside-phone {
+    color: var(--white);
+}
+
+.aside-quote .aside-phone:hover {
+    color: var(--cyan-light);
 }
 
 .service-panel h3 {
@@ -1496,9 +1564,9 @@ footer {
     content: "";
     position: absolute;
     left: 0;
-    top: 1.75em;
-    width: 12px;
-    height: 2px;
+    top: 1.45em;
+    width: 7px;
+    height: 7px;
     background: var(--cyan);
 }
 
@@ -1529,7 +1597,7 @@ footer {
     width: 2.5rem;
     height: 2.5rem;
     border: 1px solid var(--ink);
-    border-radius: 999px;
+    border-radius: var(--radius-ctl);
     background: var(--paper);
     display: flex;
     align-items: center;
@@ -1669,7 +1737,7 @@ details.faq-item summary::after {
     width: 36px;
     height: 36px;
     border: 1px solid var(--rule);
-    border-radius: 999px;
+    border-radius: var(--radius-ctl);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1729,7 +1797,7 @@ details.faq-item summary:hover h3 {
     min-height: 44px;
     padding: 10px 20px;
     border: 1px solid var(--rule);
-    border-radius: 999px;
+    border-radius: var(--radius-ctl);
     background: var(--white);
     color: var(--ink);
     font-weight: 500;
@@ -1877,7 +1945,7 @@ details.faq-item summary:hover h3 {
         height: 44px;
         justify-content: center;
         border: 1px solid var(--rule);
-        border-radius: 999px;
+        border-radius: var(--radius-ctl);
     }
 
     .header-phone-text {
@@ -1960,5 +2028,14 @@ details.faq-item summary:hover h3 {
 
     .faq-item p {
         padding-right: 0;
+    }
+}
+
+/* Smaller photo brackets on phones */
+@media (max-width: 600px) {
+    :root {
+        --br-x: 40px;
+        --br-y: 32px;
+        --br-gap: 9px;
     }
 }

@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Enable JS-only scroll reveal (content stays visible if JS/CSS fails)
-    document.body.classList.add('js-reveal');
 
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
@@ -45,28 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Intersection Observer for Fade-in Animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Only animate once
-            }
-        });
-    }, observerOptions);
-
-    // Select elements to animate
-    const animatedElements = document.querySelectorAll('.service-card, .project-card, .about-text, .section-title');
-    animatedElements.forEach(el => {
-        el.classList.add('fade-in');
-        observer.observe(el);
-    });
-
     // Analytics: count enquiries (form sends, phone taps, email taps) in GA4
     const track = (name, params) => {
         if (typeof window.gtag === 'function') window.gtag('event', name, params);
